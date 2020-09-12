@@ -21,17 +21,21 @@ public class equalparts {
         System.out.println("enter no of parts:");
         int n=obj.nextInt();
         int c=len/n;
+        int k;
         if(len%n!=0)
             System.out.println("the given string cannot be divided into equal parts");
         else
         {
             for(int i=0;i<len;i=i+c)
             {
+                k=i;
                 for(int j=0;j<c;j++)
                 {
                     b=b+s.charAt(i);
+                    i++;
                 }
                  b=b+" ";
+                 i=k;
             }
              System.out.println(b);
         }
